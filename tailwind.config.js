@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)"],
+      },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit,minmax(14rem,1fr))",
+      },
+    },
   },
   plugins: [],
 };
