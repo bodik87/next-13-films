@@ -30,7 +30,7 @@ export default async function MovieDetails({ params }) {
           {res.status}
         </h2>
         <Image
-          className="my-5 w-full"
+          className="my-5 w-full rounded-2xl"
           src={imagePath + res.backdrop_path}
           alt={res.title}
           width={1000}
