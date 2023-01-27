@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export async function generateStaticParams() {
   const data = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
+    `https://api.themoviedb.org/3/movie/popular?api_key=9da82be405d4c60581aa5478eac5a945`
   );
   const res = await data.json();
   return res.results.map((movie) => ({
@@ -15,7 +15,7 @@ export default async function MovieDetails({ params }) {
   const { movie } = params;
   const imagePath = "https://image.tmdb.org/t/p/original";
   const data = await fetch(
-    `https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.API_KEY}`,
+    `https://api.themoviedb.org/3/movie/${movie}?api_key=9da82be405d4c60581aa5478eac5a945`,
     { next: { revalidate: 60 } }
   );
   const res = await data.json();
